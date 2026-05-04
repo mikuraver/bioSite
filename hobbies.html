@@ -1,7 +1,7 @@
 <!-- Rebecca Essenburg
 CSD 340
-Assignment 6.3
-4/26/26 -->
+Assignment 7.2
+5/3/26 -->
 
 
 <!DOCTYPE html>
@@ -17,8 +17,8 @@ Assignment 6.3
       <h1>A Woman of Many Hobbies</h1>
     </header>
 
-    <div id="container">
-      <div id="navbar">
+    <main id="container">
+      <nav id="navbar">
         <a href="hobbies.html" class="button-link">
           <img class="icon" src="images/buttons/hobbies.png" alt="star">
         </a>
@@ -30,33 +30,35 @@ Assignment 6.3
         <a href="dreams.html" class="button-link">
           <img class="icon" src="images/buttons/dreams.png" alt="crescent moon">
         </a>
-      </div>
+      </nav>
 
-      <div id="hobbies-content">
-        <h2>Nic Cage</h2>
+      <section class="main-content">
+        <div id="hobby-pics">
         <figure>
-          <img src="images/Nic.jpg" alt="Nicholas Cage decorated Christmas tree">
-          <figcaption>Text about nic cage obsession here</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/Gaming.jpg" alt="Screenshot of Animal Crossing characters">
+          <img src="images/Gaming.jpg" alt="Screenshot of Animal Crossing characters" width="300" height="200">
           <figcaption>Text About Gaming Here</figcaption>
         </figure>
 
         <figure>
-          <img src="images/Baking.jpg" alt="two girls decorating a cake">
+          <h2>Nic Cage</h2>
+          <img src="images/Nic.jpg" alt="Nicholas Cage decorated Christmas tree" width="300" height="400">
+          <figcaption>Text about nic cage obsession here</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/Baking.jpg" alt="two girls decorating a cake" width="300" height="200">
           <figcaption>Text About Baking Here</figcaption>
         </figure>
-      </div>
-    </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <p>Author: Rebecca Essenburg</p>
-      <p>Class: CSD 340</p>
-      <p>Professor: Adam Bailey</p>
-      <a href="mailto:ressenburg@my365.bellevue.edu">Contact Author</a>
-      <a href="./index.html">Back to Home</a>
+      <br>Author: Rebecca Essenburg<br>
+      Class: CSD 340<br>
+      Professor: Adam Bailey<br><br>
+      <a href="mailto:ressenburg@my365.bellevue.edu" class="no-icon">Contact Author</a>
+      <a href="./index.html" class="no-icon">Back to Home</a>
     </footer>
   </body>
 </html>
