@@ -76,6 +76,7 @@ margin-top: 30px;
 display: flex;
 flex-wrap: wrap;
 text-align: center;
+min-height: 100vh;
 }
 
 #index {
@@ -95,7 +96,7 @@ padding-top: 20px;
 
 .main-content {
 flex: 1;
-margin-left: 5%;
+padding: 20px;
 margin-right: 15%;
 }
 
@@ -126,6 +127,7 @@ margin-top: 5%;
 
 #hobby-pics {
 display: flex;
+flex-position: column;
 flex-wrap: wrap;
 place-items: center;
 margin-left: 5%;
@@ -142,5 +144,11 @@ background-color: #FFAAA6;
 }
 
 figcaption {
+text-align: center;
+margin-top: 0.5rem;
 font-size: 2rem;
+}
+
+.text-image {
+width: 400px;
 }
