@@ -6,149 +6,165 @@ Assignment 7.2
 
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Kiwi+Maru&family=Modak&family=Schoolbell&display=swap');
 
+:root {
+  --primary-color: #4CA080;
+  --accent-color: #FF8C94;
+  --bg-top: #FFAAA6;
+  --bg-bottom: #DCEDC2;
+}
+
 html {
-font-size: 62.5%
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
-background-color: #FFAAA6;
-background-image: linear-gradient(to bottom, #FFAAA6, #DCEDC2);
-background-attachment: fixed;
-background-size: cover;
-min-height: 100vh;
-margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom)) no-repeat fixed;
+  background-size: cover;
+  font-family: "Kiwi Maru", serif;
+  font-size: 2rem;
+  color: black;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 h1 {
-font-family: "Modak", system-ui;
-font-size: 6rem;
-font-weight: 70;
-font-style: normal;
-text-shadow: 2px 2px black;
-color: #4CA080;
-text-align: center;
+  font-family: "Modak", system-ui;
+  font-size: 6rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 0px black;
+  color: var(--primary-color);
 }
 
 h2 {
-font-family: "Chewy", system-ui;
-font-size: 4rem;
-font-weight: 200;
-font-style: normal;
-text-shadow: 2px 2px grey;
-color: #DCEDC2;
+  font-family: "Chewy", system-ui;
+  font-size: 4rem;
+  color: var(--bg-bottom);
+  text-shadow: 2px 2px 0px grey;
 }
 
 h3 {
-font-family: "Schoolbell", cursive;
-font-size: 3rem;
-font-weight: 600;
-font-style: normal;
-text-shadow: 2px 2px grey;
-color: #FF8C94;
-}
-
-p {
-font-family: "Kiwi Maru", serif;
-font-size: 2rem;
-font-weight: 300;
-color: black;
-}
-
-.icon {
-height: 200px;
-width: 200px;
-}
-
-button {
-background: none;
-border: none;
-}
-
-header {
-display: flex;
-justify-content: center;
-place-items: center;
-gap: 40px;
-margin-top: 30px;
+  font-family: "Schoolbell", cursive;
+  font-size: 3rem;
+  color: var(--accent-color);
+  text-shadow: 1px 1px 0px grey;
 }
 
 #container {
-display: flex;
-flex-wrap: wrap;
-text-align: center;
-min-height: 100vh;
-}
-
-#index {
-display: grid;
-grid-template-columns: auto;
-place-items: center;
-}
-
-#navbar {
-position: relative;
-height: 100%;
-width: 200px;
-z-index: 1;
-overflow-x: hidden;
-padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .main-content {
-flex: 1;
-padding: 20px;
-margin-right: 15%;
+  flex: 1;
+  padding: 20px;
 }
 
-footer {
-width: 100%;
-text-align: center;
-font-style: italic;
-font-size: 2rem;
-color: grey;
+#navmain {
+  text-align: center;
 }
 
-#family-pics {
-display: flex;
-flex-wrap: wrap;
-place-items: center;
-margin-left: 5%;
-margin-top: 5%;
-gap: 25px;
+#navbar {
+  width: 200px;
+  padding-top: 20px;
+  z-index: 1;
 }
 
-#dreams-pics {
-display: flex;
-flex-wrap: wrap;
-place-items: center;
-margin-left: 5%;
-margin-top: 5%;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#hobby-pics {
-display: flex;
-flex-position: column;
-flex-wrap: wrap;
-place-items: center;
-margin-left: 5%;
-}
-
-a:not(.button-link) {
-color: #4CA080;
-padding: 5px;
-text-decoration: none;
-}
-
-a:not(.button-link):hover {
-background-color: #FFAAA6;
-}
-
-figcaption {
-text-align: center;
-margin-top: 0.5rem;
-font-size: 2rem;
+.icon {
+  height: 200px;
+  width: 200px;
 }
 
 .text-image {
-width: 400px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery {
+  background-color: var(--bg-top);
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  flex: 0 0 calc(33.33% - 10px); 
+}
+
+.gallery figure {
+  flex: 0 0 calc(33.33% - 10px); 
+}
+
+#dreambio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a.button-link{
+  text-decoration: none;
+}
+
+a:not(.button-link) {
+  color: var(--primary-color);
+  padding: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+a:not(.button-link):hover {
+  background-color: var(--bg-top);
+  border-radius: 4px;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-style: italic;
+  color: grey;
 }
